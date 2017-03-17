@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+       <meta charset="utf-8"/>
+       
+       <title>Cadastro de Produtos</title>
+       <link rel="stylesheet" href="css/estilo.css">
+       <link rel="stylesheet" href="css/formulario.css">
+       
+       
+   </head>
+   <body>
+   
+   <!-- menu de navegação -->
+	<nav id="menu">
+       <ul>
+           <li><a href="index.html">HOME</a></li>
+           <li><a href="index.html">CADASTRAR PRODUTOS</a></li>
+           <li><a href="lista_op.php">VISUALIZAR PRODUTOS</a></li>
+	 </ul>
+	</nav>
+	
+	<!--- conteudo da página--->
+        
+        <main>
+        <!-- cadastro de produtos -->
+            <div id="form_cadastro">       
+             <h1 class="cad_produto">Realizar operação</h1>
+            <form id="cadastro" method="post" action="dados_produtos.php">
+                <fieldset> 
+                    <p>
+                        <label for="cod_produto">Código do Produto:</label> 
+                        <input type="text" required="required" name="numbers" pattern="[0-9]+$" class="" id="cod_produto" name="cod_produto" title="reencha este campo">
+                    </p>
+                    <p>
+                        <label for="nome_produto">Nome do Produto:</label> 
+                        <input type="text" required="required" name="text" pattern="[a-z\s]+$" class="" id="nome_produto" name="nome_produto" title="reencha este campo">
+                    </p>
+                    <p>
+                        <label for="tipo_produto">Tipo do produto:</label> 
+                        <input type="text" required="required" name="text" pattern="[a-z\s]+$" class="" id="tipo_produto" name="tipo_produto" title="reencha este campo">
+                    </p>
+                    <p>
+                        <label for="qtd">Quantidade:</label> 
+                        <input type="number" required="required" name="numbers" pattern="[0-9]+$" class="" id="qtd" name="qtd" title="reencha este campo">
+                    </p>
+                    <p>
+                        <label for="preco">Preço:</label> 
+                        <input type="text" required="required" name="numbers" pattern="[0-9]+$" class="" id="preco" name="preco" title="reencha este campo">
+                    </p>
+                    <p class="negocio">
+                        <label for="tipo_negocio">Tipo do Negócio:</label> <br />					
+                        <label>	<input checked="checked" type="radio" id="tipo_negocio_compra" name="tipo_negocio" value="compra">compra</label>
+                        <label>	<input  type="radio" id="tipo_negocio_venda" name="tipo_negocio" value="venda">venda</label>
+                    </p>
+                </fieldset>
+                <center>
+                    <button type="submit" id="enviar" value="Enviar">Enviar</button>
+                </center>			  
+            </form>
+            </div>            
+        </main>	  
+   </body>
+</html>
